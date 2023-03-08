@@ -2,18 +2,17 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 import { Home } from "react-feather";
+import styled from "styled-components";
 
 const Header = () => {
   return (
-    <header>
+    <HeaderTag>
+      <NavLink to="/">
+        {" "}
+        <Home /> Home
+      </NavLink>
       <nav>
-        <ul>
-          <li>
-            <NavLink to="/">
-              {" "}
-              <Home /> Home
-            </NavLink>
-          </li>
+        <Ul>
           <li>
             <NavLink to="/noticias">Noticias</NavLink>
           </li>
@@ -26,11 +25,34 @@ const Header = () => {
           <li>
             <NavLink to="/economia">Economia</NavLink>
           </li>
-        </ul>
+        </Ul>
       </nav>
-      <hr />
-    </header>
+    </HeaderTag>
   );
 };
+
+const Ul = styled.ul`
+  list-style-type: none;
+  display: flex;
+  li {
+    padding-left: 1rem
+  }
+`;
+const HeaderTag = styled.header`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  > a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+  padding: 12px;
+`;
+
+const Enlace = styled(NavLink)`
+border: 1px solid red;
+`
 
 export default Header;

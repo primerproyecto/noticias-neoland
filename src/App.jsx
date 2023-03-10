@@ -1,5 +1,4 @@
-
-import "./css/reset.css"
+import "./css/reset.css";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -10,8 +9,6 @@ import Noticias from "./pages/Noticias/Noticias";
 import Main from "./components/main/Main";
 import Home from "./pages/Home/Home";
 import ErrorPage from "./pages/Error-404/ErrorPage";
-
-
 
 function App() {
   return (

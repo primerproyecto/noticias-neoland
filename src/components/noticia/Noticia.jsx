@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
-const Noticia = ({noticia}) => {
+const Noticia = ({ noticia }) => {
   return (
     <div>
-      <h2>{noticia.title}</h2>sdsdsd
+      <h2>{noticia.title}</h2>
     </div>
-  )
-}
+  );
+};
 
-export default Noticia
+export default Noticia;

@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 
 import { Home } from "react-feather";
 import styled from "styled-components";
 
+import { UserContextProvider } from "../../contexts/userContext";
+
 const Header = () => {
+  const { data } = useContext(UserContextProvider);
   return (
     <HeaderTag>
       <NavLink to="/">
@@ -25,6 +28,9 @@ const Header = () => {
           <li>
             <NavLink to="/economia">Economia</NavLink>
           </li>
+          <li>
+            <NavLink to="/economia">{data.nombre}</NavLink>
+          </li>
         </Ul>
       </nav>
     </HeaderTag>
@@ -35,7 +41,7 @@ const Ul = styled.ul`
   list-style-type: none;
   display: flex;
   li {
-    padding-left: 1rem
+    padding-left: 1rem;
   }
 `;
 const HeaderTag = styled.header`
@@ -48,11 +54,11 @@ const HeaderTag = styled.header`
     gap: 0.5rem;
     padding: 1rem;
   }
-  padding: 12px;
+  padding: 1rem;
 `;
 
 const Enlace = styled(NavLink)`
-border: 1px solid red;
-`
+  border: 1px solid red;
+`;
 
 export default Header;

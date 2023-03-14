@@ -1,11 +1,22 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
+
+import useFetchData from '../../hooks/useData';
 
 const Deportes = () => {
-  return (
-    <div>
-      Deportes
-    </div>
-  )
-}
+  const ENDPOINT = 'https://jsonplaceholder.typicode.com/posts/1/comments';
+  const { data, error, isLoading } = useFetchData(ENDPOINT);
+  console.log(data);
+  if (error) return <div>failed to load</div>;
+  if (isLoading) return <div>loading...</div>;
 
-export default Deportes
+  // if (data)
+  return (
+    <>
+      Noticias
+      <ul>{data && data?.map((item) => <li key={item.id}>{item.name}</li>)}</ul>
+    </>
+  );
+};
+
+export default Deportes;

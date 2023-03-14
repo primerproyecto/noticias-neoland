@@ -1,11 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const Economia = () => {
-  return (
-    <div>
-      Economia
-    </div>
-  )
-}
+  return <div>Economia</div>;
+};
 
-export default Economia
+export default Economia;

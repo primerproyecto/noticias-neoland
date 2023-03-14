@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useState } from 'react';
+import styled from 'styled-components';
 
 const Login = () => {
-  const [nombre, setNombre] = useState("");
-  const [contra, setContra] = useState("");
+  const [nombre, setNombre] = useState('');
+  const [contra, setContra] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("el nombre es ", nombre);
+    console.log('el nombre es ', nombre);
     if (contra === import.meta.env.VITE_APP_CONTRA) {
-      window.localStorage.setItem("nombre", nombre);
+      window.localStorage.setItem('nombre', nombre);
     }
   };
   return (

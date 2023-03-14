@@ -1,11 +1,12 @@
 /* PALETA DE COLORES GENERADA https://coolors.co/ed1c24-fdfffc-235789-f1d302-020100*/
 
-:root {
+.color-light {
   --rojo: hsla(358, 85%, 52%, 1);
   --blanco: hsla(100, 100%, 99%, 1);
   --azul: hsla(209, 59%, 34%, 1);
   --amarillo: hsla(52, 98%, 48%, 1);
   --negro: hsla(30, 100%, 0%, 1);
+  --hotpink: hsl(330, 100%, 71%);
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -20,6 +21,37 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --link-color: var(--negro);
+  --link-visited-color: var(--link-color);
+  --link-hover-color: var(--rojo);
+}
+
+.color-dark {
+  --rojo: hsla(358, 85%, 52%, 1);
+  --blanco: hsla(100, 100%, 99%, 0.85);
+  --azul: hsla(209, 59%, 34%, 0.25);
+  --amarillo: hsla(52, 98%, 48%, 0.25);
+  --negro: hsla(30, 100%, 0%, 0.95);
+  --hotpink: hsl(330, 100%, 91%);
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--azul);
+  background-color: var(--negro);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --link-color: var(--blanco);
+  --link-visited-color: var(--link-color);
+  --link-hover-color: var(--rojo);
 }
 
 a {

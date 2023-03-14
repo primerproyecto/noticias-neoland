@@ -1,9 +1,9 @@
-import { createContext, useState } from "react";
+import { createContext, useState } from 'react';
 
 export const UserContextProvider = createContext();
 
 const dataFixed = {
-  nombre: "Fernando",
+  nombre: 'Fernando',
   edad: 35,
 };
 

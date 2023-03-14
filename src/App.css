@@ -1,17 +1,13 @@
 #root {
   width: 100%;
-  margin: 0 auto;
-  padding: 0;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
   height: 100%;
 }
 .active {
-  background-color: hotpink;
+  background-color: var(--hotpink);
   border-radius: 4px;
-  padding: .25rem 0.5rem;
-  color: white;
+  padding: 0.25rem 0.5rem;
+  color: var(--link-color);
+  font-weight: 700;
 }
 
 .logo {
@@ -42,4 +38,36 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.color-dark,
+.color-light {
+  height: 100%;
+
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.color-dark {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+.color-light {
+  background-color: var(--blanco);
+  color: var(--negro);
+}
+
+a:visited {
+  color: var(--link-visited-color);
+}
+a:link {
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--link-hover-color);
 }

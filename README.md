@@ -1,31 +1,35 @@
 # EJERCICIO - PÁGINA DE NOTICIAS
 
 Objetivo: Creación de una aplicación de noticias utilizando React Router y que, además, tenga los datos mockeados, es decir, no haremos llamadas a servicios externos, sino que los mockearemos.
+
 ## FECHA FINAL: VIERNES 17 DE MARZO.
-El objetivo será subir el contenido a Github y que nos devuelva páginas para estas 3 categorías: deportes, tecnología y economía (*LOS TOPICS PUEDEN SER OTROS, SE PONEN ESOS 3 A MODO DE EJEMPLO). Los archivos mockeados tendrán que tener una estructura similar a la siguiente:
+
+El objetivo será subir el contenido a Github y que nos devuelva páginas para estas 3 categorías: deportes, tecnología y economía (\*LOS TOPICS PUEDEN SER OTROS, SE PONEN ESOS 3 A MODO DE EJEMPLO). Los archivos mockeados tendrán que tener una estructura similar a la siguiente:
 PASO 1) CREAR LOS MOCKS
 📑
 "articles": [
-    {
-      "title": "título_noticia",
-      "author": "Víctor Trevijano",
-      "published_date": "2023-03-03 09:01:52",
-      "published_date_precision": "full",
-      "link": "enlace_noticia",
-      "clean_url": "periódico.es",
-      "summary": "cuerpo de noticia",
-      "topic": "sport",
-      "country": "ES",
-      "language": "es",
-      "is_opinion": false,
-      "twitter_account": null,
-      "_score": null,
-      "_id": "1"
+{
+"title": "título_noticia",
+"author": "Víctor Trevijano",
+"published_date": "2023-03-03 09:01:52",
+"published_date_precision": "full",
+"link": "enlace_noticia",
+"clean_url": "periódico.es",
+"summary": "cuerpo de noticia",
+"topic": "sport",
+"country": "ES",
+"language": "es",
+"is_opinion": false,
+"twitter_account": null,
+"\_score": null,
+"\_id": "1"
 },
 Podéis hacer los mocks con un .json o a través de un archivo js. Este es solo de ejemplo, podéis quitar o añadir propiedades a vuestro antojo
 😚
+
 ## EJERCICIO - PÁGINA DE NOTICIAS 1
-  PASO 2)
+
+PASO 2)
 Crear un componente principal "App" que actúe como contenedor de la aplicación y utilice React Router para gestionar la navegación entre diferentes páginas.
 Deberá tener las siguientes rutas y componentes asociados:
 A) La raíz (/) pintará el componente Home en el que podrás meter el contenido que desees y acuérdate de hacer un nav que contenga los links a las diferentes secciones
@@ -39,9 +43,10 @@ Crea el componente NoticiasHome, este mostrará botones para navegar a cada una 
 Como puedes imaginar, tendrás que enrutar cada una de estas páginas también para que se visualice el contenido correctamente.
 PASO 4)
 Crea el componente Noticias. Este será el encargado de traer los datos del mock y renderizar un listado de noticias de diferentes topics (deporte, tecnología y economía).
- EJERCICIO - PÁGINA DE NOTICIAS 2
+EJERCICIO - PÁGINA DE NOTICIAS 2
 
-## EXTRAS: 
+## EXTRAS:
+
 Se considerarán como extras las siguientes implementaciones
 Se valorará una buena arquitectura basada en componentes, organización de carpetas, etc.
 En lugar de usar mocks, se recomienda usar una página como mockAPI que nos permite hacer nuestra propia api de forma sencilla, os dejamos el enlace para que le echéis un ojo, este apartado extra es altamente recomendado. https://mockapi.io/

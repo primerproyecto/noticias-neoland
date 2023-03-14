@@ -1,17 +1,17 @@
-import React, { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useContext } from 'react';
+import { Home } from 'react-feather';
+import { NavLink } from 'react-router-dom';
+import styled from 'styled-components';
+import Switcher from '../switcher/Switcher';
 
-import { Home } from "react-feather";
-import styled from "styled-components";
-
-import { UserContextProvider } from "../../contexts/userContext";
+import { UserContextProvider } from '../../contexts/userContext';
 
 const Header = () => {
   const { data } = useContext(UserContextProvider);
   return (
     <HeaderTag>
       <NavLink to="/">
-        {" "}
+        {' '}
         <Home /> Home
       </NavLink>
       <nav>
@@ -29,7 +29,7 @@ const Header = () => {
             <NavLink to="/economia">Economia</NavLink>
           </li>
           <li>
-            <NavLink to="/economia">{data.nombre}</NavLink>
+            <Switcher />
           </li>
         </Ul>
       </nav>

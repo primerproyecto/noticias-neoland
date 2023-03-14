@@ -15,7 +15,7 @@ const Noticia = () => {
   console.log('y que es resultado', resultado);
   return (
     <div>
-      <img src={resultado[0].imagen} />
+      <img src={resultado[0].imagen} alt="Texto alternativo " />
     </div>
   );
 };

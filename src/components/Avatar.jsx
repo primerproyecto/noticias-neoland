@@ -1,14 +1,13 @@
 import React from 'react';
-
 import styled from 'styled-components';
 
-export const Avatar = (imagen) => {
-  return <img src={imagen} alt="" />;
+export const Avatar = ({ imagen }) => {
+  return <Imagen src={imagen} alt="" />;
 };
 
-const AvatarImg = styled.img`
+const Imagen = styled.img`
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  object-fit: contain;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--azul);
 `;

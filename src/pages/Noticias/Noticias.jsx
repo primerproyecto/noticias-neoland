@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { Avatar } from '../../components/Avatar';
 
+import { Avatar } from '../../components/Avatar';
 import useFetchData from '../../hooks/useData';
 
 // const ENDPOINT = "https://6407a83c8ee73db92e2eea2f.mockapi.io/api/v1/Noticias";
@@ -12,7 +12,7 @@ const Noticias = () => {
   if (error) return <div>failed to load</div>;
   if (isLoading) return <div>loading...</div>;
 
-  // if (data)
+  console.log('que es data desde noticias ', data);
   return (
     <>
       Noticias
@@ -20,13 +20,23 @@ const Noticias = () => {
         {data &&
           data?.map((item) => (
             <LiTag key={item.id}>
-              {item.title}
-              <Avatar imagen={item.avatar} />
-
               <Link to={`/noticias/` + item.id}>
-                <img src={item.imagen} />
+                <FigureTag>
+                  <img src={item.imagen} alt="Texto descriptivo" />
+                  {item.title}
+                  <figcaption>{item.texto}.</figcaption>
+                  <div
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      padding: '0.5rem',
+                      gap: '0.3rem',
+                    }}
+                  >
+                    <Avatar imagen={item.avatar} /> <a href={item.link}>{item.link}</a>
+                  </div>
+                </FigureTag>
               </Link>
-              <a href={item.link}>{item.link}</a>
             </LiTag>
           ))}
       </UlTag>
@@ -38,12 +48,25 @@ const UlTag = styled.ul`
   list-style-type: none;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr;
   gap: 1rem;
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  @media (min-width: 1100px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 `;
 const LiTag = styled.li`
-  border: 1px solid red;
   padding: 1rem;
+`;
+const FigureTag = styled.figure`
+  border: 1px solid var(--rojo);
 `;
 
 export default Noticias;

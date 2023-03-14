@@ -39,8 +39,9 @@ Crear un componente principal "App" que actúe como contenedor de la aplicación
 
 Deberá tener las siguientes rutas y componentes asociados:
 1. La raíz (/) pintará el componente Home en el que podrás meter el contenido que desees y acuérdate de hacer un nav que contenga los links a las diferentes secciones
-2. /noticias pintará el componente NoticiasHome que tendrá un selector de categorías C) Añade una página 404 para todas las demás urls
-3. El resto de páginas y rutas podéis intuirlas con la imagen que os hemos adjuntado un poco más arriba.
+2. /noticias pintará el componente NoticiasHome que tendrá un selector de categorías 
+3. Añade una página 404 para todas las demás urls
+4. El resto de páginas y rutas podéis intuirlas con la imagen que os hemos adjuntado un poco más arriba.
 
 PASO 3 Crea el componente NoticiasHome, este mostrará botones para navegar a cada una de las categorias de noticias:
 

@@ -6,13 +6,13 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Main from './components/main/Main';
 import Noticia from './components/noticia/Noticia';
+import { ThemeContext } from './contexts/ThemeContext';
 import Deportes from './pages/Deportes/Deportes';
 import Economia from './pages/Economia/Economia';
 import ErrorPage from './pages/Error-404/ErrorPage';
 import Home from './pages/Home/Home';
 import Noticias from './pages/Noticias/Noticias';
 import Teconologia from './pages/Tecnologia/Teconologia';
-import { ThemeContext } from './contexts/ThemeContext';
 
 function App() {
   const { theme } = useContext(ThemeContext);

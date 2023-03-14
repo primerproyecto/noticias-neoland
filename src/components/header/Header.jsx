@@ -1,18 +1,18 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Home } from 'react-feather';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+
+/* import { UserContextProvider } from '../../contexts/userContext'; */
 import Switcher from '../switcher/Switcher';
 
-import { UserContextProvider } from '../../contexts/userContext';
-
 const Header = () => {
-  const { data } = useContext(UserContextProvider);
+  /* const { data } = useContext(UserContextProvider); */
   return (
     <HeaderTag>
       <NavLink to="/">
         {' '}
-        <Home /> Home
+        <Home />
       </NavLink>
       <nav>
         <Ul>
@@ -26,9 +26,6 @@ const Header = () => {
             <NavLink to="/tecnologia">Tecnologia</NavLink>
           </li>
           <li>
-            <NavLink to="/economia">Economia</NavLink>
-          </li>
-          <li>
             <Switcher />
           </li>
         </Ul>
@@ -40,6 +37,7 @@ const Header = () => {
 const Ul = styled.ul`
   list-style-type: none;
   display: flex;
+  padding: 0;
   li {
     padding-left: 1rem;
   }
@@ -48,6 +46,7 @@ const HeaderTag = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: row;
   > a {
     display: flex;
     align-items: center;
@@ -55,10 +54,9 @@ const HeaderTag = styled.header`
     padding: 1rem;
   }
   padding: 1rem;
-`;
-
-const Enlace = styled(NavLink)`
-  border: 1px solid red;
+  @media (min-width: 400px) {
+    flex-direction: column;
+  }
 `;
 
 export default Header;

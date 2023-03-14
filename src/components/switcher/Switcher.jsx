@@ -1,7 +1,7 @@
 import { useContext } from 'react';
-import { ThemeContext } from '../../contexts/ThemeContext';
-
 import styled from 'styled-components';
+
+import { ThemeContext } from '../../contexts/ThemeContext';
 
 const ThemeSwitcher = () => {
   // Accedemos a los valores de ThemeContext
